@@ -529,7 +529,9 @@ Show all protocol messages with hex dump.
 
 =item B<-trace>
 
-Show verbose trace output of protocol messages.
+Show verbose trace output of protocol messages.  In a build with tracing
+enabled, set the B<OPENSSL_TRACE> environment variable to B<TLS_CIPHER> to
+additionally record the selected ciphersuite.
 
 =item B<-msgfile> I<filename>
 

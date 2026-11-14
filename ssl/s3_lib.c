@@ -5004,6 +5004,9 @@ const SSL_CIPHER *ssl3_choose_cipher(SSL_CONNECTION *s, STACK_OF(SSL_CIPHER) *cl
 
     sk_SSL_CIPHER_free(prio_chacha);
 
+    if (ret != NULL)
+        OSSL_TRACE1(TLS_CIPHER, "Selected ciphersuite: %s\n", ret->name);
+
     return ret;
 }
 
